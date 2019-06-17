@@ -4,6 +4,8 @@ module.exports = {
   async store(req, res) {
     const post = await Post.findById(req.params.id)
 
+    console.log('ENTREI')
+
     post.likes += 1
 
     await post.save()
